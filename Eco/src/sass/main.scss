@@ -11,12 +11,6 @@ body {
     }
 
 }
-
-
-
-
-
-
 nav {
     width: auto;
     @include flexCenter(row, space-between, center);
