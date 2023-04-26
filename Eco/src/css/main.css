@@ -61,6 +61,10 @@ body svg path {
   stroke: currentColor;
 }
 
+.hidden {
+  overflow: hidden;
+}
+
 nav {
   width: auto;
   display: flex;
@@ -334,6 +338,40 @@ p,
 h3 {
   padding: 10px;
   font-size: 1.5rem;
+}
+
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: block; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #FFEFE7; /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+#overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto 0;
+  white-space: nowrap;
+  font-size: 2rem;
+  color: #fa9500;
+}
+@media (max-width: 720px) {
+  #overlay-text {
+    white-space: nowrap;
+    font-size: 2rem;
+    color: #E86424;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+  }
 }
 
 footer {
